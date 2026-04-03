@@ -1,0 +1,18 @@
+{
+  "name": "baidu-author-publish",
+  "display_name": "百度作家平台发布技能",
+  "version": "0.1.0",
+  "description": "一个用于百度作家平台后台的半自动发布技能包，支持准备草稿、发布前检查、人工确认后发布，以及章节状态核对。",
+  "language": "zh-CN",
+  "platform": "OpenClaw",
+  "runtime": {
+    "os": ["linux"],
+    "encoding": "UTF-8",
+    "line_endings": "LF"
+  },
+  "risk_level": "medium",
+  "human_in_the_loop": true,
+  "supported_actions": ["prepare_draft", "review", "publish", "reconcile"],
+  "required_tools": ["browser"],
+  "optional_tools": ["files", "screenshots", "logs"]
+}

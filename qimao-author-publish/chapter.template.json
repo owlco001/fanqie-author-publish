@@ -1,0 +1,9 @@
+{
+  "book_name": "作品名",
+  "chapter_title": "第12章 标题示例",
+  "chapter_body": "这里填写章节正文。\n\n如果有分段，直接换行即可。",
+  "action": "prepare_draft",
+  "publish_time": "",
+  "source_file": "/home/author/novel/qimao/chapter12.md",
+  "notes": "可选备注。"
+}

@@ -1,0 +1,20 @@
+{
+  "book_name": "夜行者日志",
+  "default_action": "prepare_draft",
+  "chapters": [
+    {
+      "chapter_title": "第12章 夜雨将至",
+      "chapter_body": "雨是半夜落下来的。\n\n林砚被窗沿上的滴水声吵醒时，整座旧城还陷在断电后的黑暗里。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/baidu/夜行者日志/第12章_夜雨将至.md",
+      "notes": "发布前检查分段是否正常。"
+    },
+    {
+      "chapter_title": "第13章 旧巷来客",
+      "chapter_body": "巷口的脚步声最终停在了楼下。\n\n林砚屏住呼吸，听见有人轻轻敲了三下铁门。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/baidu/夜行者日志/第13章_旧巷来客.md",
+      "notes": "注意本章结尾停顿。"
+    }
+  ]
+}

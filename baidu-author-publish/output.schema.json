@@ -1,0 +1,28 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/baidu-author-publish/output.schema.json",
+  "title": "baidu-author-publish output schema",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["state", "action", "book_name", "result", "warning", "log_path", "screenshot_paths"],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": ["pending", "backend_opened", "book_selected", "editor_opened", "draft_loaded", "draft_saved", "awaiting_confirmation", "published_verified", "failed_needs_review"]
+    },
+    "action": {
+      "type": "string",
+      "enum": ["prepare_draft", "review", "publish", "reconcile"]
+    },
+    "book_name": { "type": "string", "minLength": 1 },
+    "chapter_title": { "type": "string", "default": "" },
+    "result": { "type": "string", "minLength": 1 },
+    "warning": { "type": "string", "default": "" },
+    "blocking_reason": { "type": "string", "default": "" },
+    "requires_manual_action": { "type": "boolean", "default": false },
+    "confirmation_required": { "type": "boolean", "default": false },
+    "log_path": { "type": "string" },
+    "screenshot_paths": { "type": "array", "items": { "type": "string" }, "default": [] },
+    "next_step": { "type": "string", "default": "" }
+  }
+}

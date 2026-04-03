@@ -1,0 +1,13 @@
+{
+  "book_name": "作品名",
+  "default_action": "prepare_draft",
+  "chapters": [
+    {
+      "chapter_title": "第12章 标题示例",
+      "chapter_body": "这里填写第12章正文。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/baidu/book/chapter12.md",
+      "notes": "发布前检查段落与结尾。"
+    }
+  ]
+}
