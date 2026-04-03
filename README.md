@@ -28,6 +28,7 @@
 ```text
 fanqie-author-publish/
 ├─ README.md
+├─ CHANGELOG.md
 ├─ SKILL.md
 ├─ manifest.json
 ├─ browser-workflow.md
@@ -61,6 +62,10 @@ fanqie-author-publish/
 - 所需工具
 - 安全约束
 - 批量策略
+
+### `CHANGELOG.md`
+
+版本更新日志，记录每个版本新增的能力与说明。
 
 ### `SKILL.md`
 
