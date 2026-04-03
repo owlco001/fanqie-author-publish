@@ -245,6 +245,18 @@ bash setup-linux.sh /home/author/openclaw-skills
 - 检查关键文件是否存在
 - 输出下一步联调建议
 
+## 效果展示
+
+以下截图用于展示当前技能包在番茄作者后台联调过程中的页面效果：
+
+![页面截图 1](docs/images/screenshot-1.png)
+
+![页面截图 2](docs/images/screenshot-2.png)
+
+![页面截图 3](docs/images/screenshot-3.png)
+
+![页面截图 4](docs/images/screenshot-4.png)
+
 ## 推荐工作流
 
 ### 1. 准备章节数据
