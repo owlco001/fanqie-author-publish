@@ -2,6 +2,23 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.1] - 2026-04-04
+
+### Added
+
+- Added `qimao-author-publish` as a Fanqie-derived skill skeleton for Qimao author workflows.
+- Added `baidu-author-publish` as a Fanqie-derived skill skeleton for Baidu author workflows.
+- Added Linux/OpenClaw-aligned manifests, schemas, workflow files, setup scripts, and validation scripts for both new platform packages.
+- Expanded `qimao-author-publish/real-site-calibration-checklist.md` into a full first-time calibration checklist.
+- Expanded `baidu-author-publish/real-site-calibration-checklist.md` into a full first-time calibration checklist.
+- Added multi-platform navigation and derived-skill notes to the main `README.md`.
+
+### Notes
+
+- `fanqie-author-publish` remains the primary template and the most complete reference package.
+- `qimao-author-publish` and `baidu-author-publish` are intentionally derived from the Fanqie package structure to accelerate cross-platform expansion.
+- Both derived packages still require real-site calibration before production use.
+
 ## [0.1.0] - 2026-04-04
 
 ### Added
