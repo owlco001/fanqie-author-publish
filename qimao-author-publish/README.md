@@ -42,3 +42,30 @@ qimao-author-publish/
 - 输入输出结构与 `fanqie-author-publish` 保持一致，便于多平台复用。
 - 当前仍需根据七猫作者后台真实页面补充按钮文案、编辑器行为和发布校验规则。
 - 建议先完成真实页面联调，再启用正式发布流程。
+
+## 登录态保持说明
+
+不建议提取、导出或复用站点 Cookie。
+
+推荐做法是：
+- 在 Linux 主机上为七猫作者后台使用固定浏览器 profile
+- 用这个 profile 手动登录一次
+- 后续始终复用同一个 profile 运行 OpenClaw 浏览器流程
+
+推荐目录：
+
+```text
+/home/author/browser-profiles/qimao/
+```
+
+示例启动方式：
+
+```bash
+chromium --user-data-dir=/home/author/browser-profiles/qimao
+```
+
+或者：
+
+```bash
+google-chrome --user-data-dir=/home/author/browser-profiles/qimao
+```

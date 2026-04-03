@@ -277,6 +277,47 @@ bash setup-linux.sh /home/author/openclaw-skills
 - 使用专门的浏览器配置文件
 - 不要把密码、Cookie、短信验证码交给代理
 
+### 2.1 登录态保持说明
+
+不建议提取、导出或复用站点 Cookie。
+
+推荐做法是：
+- 在 Linux 主机上为番茄作者后台使用固定浏览器 profile
+- 用这个 profile 手动登录一次
+- 后续始终复用同一个 profile 运行 OpenClaw 浏览器流程
+
+推荐目录：
+
+```text
+/home/author/browser-profiles/fanqie/
+```
+
+示例启动方式：
+
+```bash
+chromium --user-data-dir=/home/author/browser-profiles/fanqie
+```
+
+或者：
+
+```bash
+google-chrome --user-data-dir=/home/author/browser-profiles/fanqie
+```
+
+操作建议：
+1. 用固定 profile 启动浏览器
+2. 手动登录番茄作者后台
+3. 完成短信验证、验证码或安全确认
+4. 关闭浏览器后，再用同一个 profile 重新打开，确认登录态仍在
+5. 让 OpenClaw 绑定这个固定 profile，而不是新建临时浏览器会话
+
+为了尽量保持登录稳定：
+- 固定浏览器版本
+- 固定 profile
+- 尽量固定网络出口和设备环境
+- 不要频繁切换 IP、时区、UA 或分辨率
+- 不要把登录敏感信息放进自动化流程
+
 ### 3. 执行真实页面联调
 
 第一次接入真实页面时，不要先做正式发布。
@@ -352,6 +393,7 @@ logs/2026-04-03_第12章_夜雨将至.md
 - 发布动作只执行一次，避免重复点击
 - 每个关键节点尽量截图
 - 不要在聊天中暴露账号敏感信息
+- 不要导出、分享或跨环境搬运站点 Cookie
 
 ## 当前定位
 
