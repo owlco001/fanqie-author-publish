@@ -1,0 +1,136 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.local/fanqie-author-publish/output.schema.json",
+  "title": "fanqie-author-publish output schema",
+  "description": "Machine-readable run result schema for the fanqie-author-publish skill.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "state",
+    "action",
+    "book_name",
+    "result",
+    "warning",
+    "log_path",
+    "screenshot_paths"
+  ],
+  "properties": {
+    "state": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "backend_opened",
+        "book_selected",
+        "editor_opened",
+        "draft_loaded",
+        "draft_saved",
+        "awaiting_confirmation",
+        "published_verified",
+        "failed_needs_review"
+      ]
+    },
+    "action": {
+      "type": "string",
+      "enum": [
+        "prepare_draft",
+        "review",
+        "publish",
+        "reconcile"
+      ]
+    },
+    "book_name": {
+      "type": "string",
+      "minLength": 1
+    },
+    "chapter_title": {
+      "type": "string",
+      "default": ""
+    },
+    "result": {
+      "type": "string",
+      "minLength": 1
+    },
+    "warning": {
+      "type": "string",
+      "default": ""
+    },
+    "blocking_reason": {
+      "type": "string",
+      "default": ""
+    },
+    "requires_manual_action": {
+      "type": "boolean",
+      "default": false
+    },
+    "confirmation_required": {
+      "type": "boolean",
+      "default": false
+    },
+    "log_path": {
+      "type": "string",
+      "pattern": "^(logs/|/).+"
+    },
+    "screenshot_paths": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "pattern": "^(screenshots/|/).+"
+      },
+      "default": []
+    },
+    "evidence": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "default": []
+    },
+    "timestamp": {
+      "type": "string",
+      "description": "ISO 8601 timestamp for the run result, if available.",
+      "default": ""
+    },
+    "next_step": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "allOf": [
+    {
+      "if": {
+        "properties": {
+          "action": {
+            "const": "publish"
+          }
+        },
+        "required": [
+          "action"
+        ]
+      },
+      "then": {
+        "required": [
+          "chapter_title",
+          "confirmation_required"
+        ]
+      }
+    },
+    {
+      "if": {
+        "properties": {
+          "state": {
+            "const": "failed_needs_review"
+          }
+        },
+        "required": [
+          "state"
+        ]
+      },
+      "then": {
+        "required": [
+          "blocking_reason",
+          "requires_manual_action"
+        ]
+      }
+    }
+  ]
+}

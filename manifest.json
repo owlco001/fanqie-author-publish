@@ -1,0 +1,62 @@
+{
+  "name": "fanqie-author-publish",
+  "display_name": "番茄作者发布技能",
+  "version": "0.1.0",
+  "description": "一个用于番茄小说作者后台的半自动发布技能包，支持准备草稿、发布前检查、人工确认后发布，以及章节状态核对。",
+  "language": "zh-CN",
+  "platform": "OpenClaw",
+  "runtime": {
+    "os": [
+      "linux"
+    ],
+    "encoding": "UTF-8",
+    "line_endings": "LF"
+  },
+  "risk_level": "medium",
+  "human_in_the_loop": true,
+  "supported_actions": [
+    "prepare_draft",
+    "review",
+    "publish",
+    "reconcile"
+  ],
+  "required_tools": [
+    "browser"
+  ],
+  "optional_tools": [
+    "files",
+    "screenshots",
+    "logs"
+  ],
+  "entrypoints": {
+    "skill": "SKILL.md",
+    "workflow": "browser-workflow.md",
+    "execution_policy": "execution-policy.md",
+    "selectors": "selectors.md",
+    "input_schema": "input.schema.json",
+    "output_schema": "output.schema.json",
+    "readme": "README.md"
+  },
+  "examples": {
+    "single": "chapter.example.json",
+    "batch": "chapters.batch.example.json",
+    "log": "logs/example-log.md"
+  },
+  "directories": {
+    "logs": "logs",
+    "screenshots": "screenshots"
+  },
+  "safety": {
+    "manual_login_required": true,
+    "explicit_publish_confirmation_required": true,
+    "stop_on_captcha": true,
+    "stop_on_risk_control": true,
+    "stop_on_account_mismatch": true,
+    "save_draft_before_publish": true
+  },
+  "batch_policy": {
+    "max_items": 5,
+    "default_stop_on_failure": true,
+    "allow_duplicate_titles": false
+  }
+}

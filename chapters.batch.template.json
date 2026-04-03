@@ -1,0 +1,20 @@
+{
+  "book_name": "作品名",
+  "default_action": "prepare_draft",
+  "chapters": [
+    {
+      "chapter_title": "第12章 标题示例",
+      "chapter_body": "这里填写第12章正文。\n\n分段可以直接保留自然换行。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/book/chapter12.md",
+      "notes": "发布前检查段落与结尾。"
+    },
+    {
+      "chapter_title": "第13章 标题示例",
+      "chapter_body": "这里填写第13章正文。\n\n如果是批量准备草稿，可以按顺序填写多个章节。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/book/chapter13.md",
+      "notes": "确认本章与上一章衔接。"
+    }
+  ]
+}

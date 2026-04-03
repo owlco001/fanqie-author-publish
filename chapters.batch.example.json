@@ -1,0 +1,27 @@
+{
+  "book_name": "夜行者日志",
+  "default_action": "prepare_draft",
+  "chapters": [
+    {
+      "chapter_title": "第12章 夜雨将至",
+      "chapter_body": "雨是半夜落下来的。\n\n林砚被窗沿上的滴水声吵醒时，整座旧城还陷在断电后的黑暗里。\n\n他摸黑坐起身，先听见了风，再听见楼下巷口传来的脚步声。那脚步声很慢，像是在故意等人听见。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/夜行者日志/第12章_夜雨将至.md",
+      "notes": "发布前检查分段是否正常。"
+    },
+    {
+      "chapter_title": "第13章 旧巷来客",
+      "chapter_body": "巷口的脚步声最终停在了楼下。\n\n林砚屏住呼吸，听见有人轻轻敲了三下铁门。那不是熟人会用的节奏，却像是某种约定好的暗号。\n\n几秒后，门外传来一个低哑的女声。\n\n她只说了四个字。\n\n她说，开灯，别看。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/夜行者日志/第13章_旧巷来客.md",
+      "notes": "注意本章结尾的悬念停顿。"
+    },
+    {
+      "chapter_title": "第14章 纸条的背面",
+      "chapter_body": "他没有开门。\n\n可下一秒，一张被雨水打湿的纸条从门缝底下慢慢塞了进来。\n\n林砚盯着那张纸，迟迟没有弯腰去捡。直到窗外一道闪电照亮房间，他才看见纸条背面还写着另一句话。\n\n那句话比前一张更短，也更让人后背发冷。\n\n这次，轮到你了。",
+      "publish_time": "",
+      "source_file": "/home/author/novel/夜行者日志/第14章_纸条的背面.md",
+      "notes": "确认本章末尾单独成段显示。"
+    }
+  ]
+}
