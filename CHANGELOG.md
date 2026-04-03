@@ -2,6 +2,21 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.2] - 2026-04-04
+
+### Added
+
+- Added persistent browser profile login guidance to `fanqie-author-publish/README.md`.
+- Added login-state handling policy to `fanqie-author-publish/execution-policy.md`.
+- Added matching persistent profile login guidance to `qimao-author-publish` and `baidu-author-publish` README files.
+- Added matching login-state handling policy to `qimao-author-publish` and `baidu-author-publish` execution policy files.
+
+### Notes
+
+- The project now consistently recommends persistent browser profiles instead of extracting or reusing site cookies.
+- Manual login remains the expected workflow for all supported platforms.
+- This guidance is aligned across Fanqie, Qimao, and Baidu author platform skill packages.
+
 ## [0.1.1] - 2026-04-04
 
 ### Added
