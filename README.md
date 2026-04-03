@@ -365,6 +365,7 @@ logs/2026-04-03_第12章_夜雨将至.md
 - `baidu-author-publish`：面向百度作家平台
 
 这些目录当前都采用统一的 Linux/OpenClaw 技能包结构，方便共享输入格式、日志格式和联调方法。
+其中 `qimao-author-publish` 和 `baidu-author-publish` 都是基于 `fanqie-author-publish` 的结构派生出来的同规格技能骨架，用于快速扩展到其他作者平台。
 
 ## 多平台导航
 
@@ -378,12 +379,14 @@ logs/2026-04-03_第12章_夜雨将至.md
 
 - 平台：七猫小说作者后台
 - 状态：已建立同规格技能骨架
+- 来源：基于 `fanqie-author-publish` 派生
 - 下一步重点：根据真实页面补按钮文案、编辑器类型和发布校验逻辑
 
 ### `baidu-author-publish`
 
 - 平台：百度作家平台
 - 状态：已建立同规格技能骨架
+- 来源：基于 `fanqie-author-publish` 派生
 - 下一步重点：根据真实页面补后台入口、章节编辑器与保存/发布信号
 
 它已经定义了：
