@@ -2,6 +2,20 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.4] - 2026-04-04
+
+### Added
+
+- Added `skills/qimao-publisher/` as a reusable Qimao chapter publishing skill package.
+- Added `skills/baidu-publisher/` as a reusable Baidu author platform chapter publishing skill package.
+- Added `skills/fanqie-publisher/README.md` with usage guidance for the Fanqie publisher skill.
+- Added README entries for the Qimao and Baidu reusable publisher skill packages.
+
+### Notes
+
+- The repository now contains reusable publisher skill packages for Fanqie, Qimao, and Baidu author workflows.
+- `qimao-publisher` and `baidu-publisher` mirror the Fanqie skill structure to keep cross-platform task generation consistent.
+
 ## [0.1.3] - 2026-04-04
 
 ### Added
