@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file.
 
+## [0.1.3] - 2026-04-04
+
+### Added
+
+- Added `examples/playwright-fanqie-publish-example.js` as a Playwright-based Fanqie publishing flow example.
+- Added `skills/fanqie-publisher/` as a reusable Fanqie chapter publishing skill package.
+- Added `skills/fanqie-publisher/SKILL.md` for task definition and execution rules.
+- Added `skills/fanqie-publisher/templates/task-template.txt` for parameterized browser task generation.
+- Added `skills/fanqie-publisher/scripts/prepare-task.js` for rendering task files from environment variables.
+- Added README entries for the Playwright example and the reusable Fanqie publisher skill.
+
+### Notes
+
+- This release turns the Fanqie browser workflow into a reusable skill structure instead of keeping it only as ad hoc prompt guidance.
+- The example script and skill template are intended to support both draft-saving and optional publish flows.
+
 ## [0.1.2] - 2026-04-04
 
 ### Added

@@ -158,6 +158,25 @@ Linux 初始化脚本草案，用于：
 - 初始化 `logs/` 和 `screenshots/`
 - 给出下一步联调入口
 
+### `examples/playwright-fanqie-publish-example.js`
+
+一个基于 Playwright 的番茄发布流程示例脚本，覆盖：
+- 直达新建草稿 / 新建章节入口
+- 标题写入
+- ProseMirror 正文写入
+- 正文字数同步等待
+- 存草稿校验
+- 可选的发布入口检测
+
+### `skills/fanqie-publisher/`
+
+一个面向番茄章节发布任务的 skill 三件套，包含：
+- `SKILL.md`
+- `templates/task-template.txt`
+- `scripts/prepare-task.js`
+
+适合把番茄发布流程从临时 prompt 整理成可复用任务模板。
+
 ## 输入文件说明
 
 ### 单章节输入

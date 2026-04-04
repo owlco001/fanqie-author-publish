@@ -1,0 +1,70 @@
+任务：在番茄小说作者后台为指定书籍创建章节，填写标题与正文，保存草稿；如 AUTO_PUBLISH=true，则继续发布。
+
+参数：
+- BOOK_ID: {{BOOK_ID}}
+- TITLE: {{TITLE}}
+- BODY_PATH: {{BODY_PATH}}
+- AUTO_PUBLISH: {{AUTO_PUBLISH}}
+- MIN_WORDS: {{MIN_WORDS}}
+
+执行要求：
+
+1. 先访问以下两个入口，哪个能进入编辑器就使用哪个：
+   - https://fanqienovel.com/main/writer/{{BOOK_ID}}/publish/?enter_from=newdraft
+   - https://fanqienovel.com/main/writer/{{BOOK_ID}}/publish/?enter_from=newchapter
+
+2. 成功进入编辑器的判定：
+   - 页面存在标题输入框，placeholder 类似“请输入标题”
+   - 页面存在正文富文本编辑区域
+
+3. 如果未登录：
+   - 立即停止
+   - 返回“需要登录”
+
+4. 读取 `{{BODY_PATH}}` 作为正文内容。
+
+5. 填写标题：
+   - 设置为 `{{TITLE}}`
+   - 填完后再次读取并验证标题完全一致
+
+6. 填写正文：
+   - 优先尝试粘贴
+   - 失败则退回键盘输入
+   - 填写后确认编辑区已有正文内容
+   - 并确认页面字数已同步，且 `>= {{MIN_WORDS}}`
+
+7. 保存草稿：
+   - 点击“保存草稿”或等效按钮
+   - 等待出现“已保存 / 保存成功 / 草稿已保存”等提示
+   - 保存截图
+
+8. 如果 `AUTO_PUBLISH=false`：
+   - 到此结束
+   - 返回保存结果
+
+9. 如果 `AUTO_PUBLISH=true`：
+   - 继续寻找“发布 / 立即发布 / 提交”按钮
+   - 如出现确认弹窗则继续确认
+   - 等待出现：
+     - 发布成功
+     - 已发布
+     - 审核中
+     - 待审核
+     - 或跳转到非 publish 页面
+   - 保存截图
+
+10. 注意：
+   - 每次页面变化后重新 snapshot
+   - 不依赖旧元素引用
+   - 失败时截图并报告具体失败步骤
+
+输出格式：
+- openedUrl:
+- currentUrl:
+- titleVerified:
+- wordCount:
+- draftSaved:
+- published:
+- publishSignal:
+- screenshots:
+- note:
