@@ -1,0 +1,29 @@
+任务：在七猫小说作者后台为指定书籍创建章节，填写标题与正文，保存草稿；如 AUTO_PUBLISH=true，则继续发布。
+
+参数：
+- BOOK_ID: {{BOOK_ID}}
+- TITLE: {{TITLE}}
+- BODY_PATH: {{BODY_PATH}}
+- AUTO_PUBLISH: {{AUTO_PUBLISH}}
+- MIN_WORDS: {{MIN_WORDS}}
+
+执行要求：
+
+1. 打开七猫作者后台并定位到 `{{BOOK_ID}}` 对应作品。
+2. 进入新建章节或草稿编辑器页面。
+3. 读取 `{{BODY_PATH}}` 作为正文内容。
+4. 填写标题并确认回显为 `{{TITLE}}`。
+5. 填写正文并确认编辑器存在正文内容，且页面字数已同步，且 `>= {{MIN_WORDS}}`。
+6. 点击保存草稿并等待保存成功信号。
+7. 如果 `AUTO_PUBLISH=true`，继续点击发布并等待成功或审核状态。
+8. 失败时截图并报告具体卡点。
+
+输出格式：
+- currentUrl:
+- titleVerified:
+- wordCount:
+- draftSaved:
+- published:
+- publishSignal:
+- screenshots:
+- note:

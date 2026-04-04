@@ -177,6 +177,14 @@ Linux 初始化脚本草案，用于：
 
 适合把番茄发布流程从临时 prompt 整理成可复用任务模板。
 
+### `skills/qimao-publisher/`
+
+一个面向七猫章节发布任务的 skill 三件套，结构与 `fanqie-publisher` 对齐，便于后续复用与联调。
+
+### `skills/baidu-publisher/`
+
+一个面向百度作家平台章节发布任务的 skill 三件套，结构与 `fanqie-publisher` 对齐，便于后续复用与联调。
+
 ## 输入文件说明
 
 ### 单章节输入
